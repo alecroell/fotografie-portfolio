@@ -1,0 +1,29 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Francine — Portret & Evenement">
+  <main>
+    <header class="intro">
+      <h1>Francine</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/portret-evenement/francine/Francine.jpeg", alt: "Francine" },
+        { src: "/fotos/portfolio/portret-evenement/francine/Francine%20grijs.jpeg", alt: "Francine (zwart-wit)" },
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </main>
+
+  <style>
+    .intro { text-align:center; margin: 0 0 2rem; }
+    .intro h1 { color: var(--accent); margin: 0 0 .5rem; }
+    .intro p { margin: 0; opacity: .75; }
+  </style>
+</Layout>

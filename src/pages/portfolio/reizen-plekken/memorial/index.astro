@@ -1,0 +1,30 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Memorial — Reizen & Plekken">
+  <main>
+    <header class="intro">
+      <h1>Memorial</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/reizen-plekken/memorial/flowerrr.JPG", alt: "Memorial" },
+        { src: "/fotos/portfolio/reizen-plekken/memorial/memorial%20of%20the%20jews.jpg", alt: "Memorial" },
+        { src: "/fotos/portfolio/reizen-plekken/memorial/flower%20memorial%20of%20the%20jews.jpg", alt: "Memorial" },
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </main>
+
+  <style>
+    .intro { text-align:center; margin: 0 0 2rem; }
+    .intro h1 { color: var(--accent); margin: 0 0 .5rem; }
+    .intro p { margin: 0; opacity: .75; }
+  </style>
+</Layout>

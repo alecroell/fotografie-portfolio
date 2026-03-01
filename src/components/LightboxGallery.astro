@@ -1,0 +1,224 @@
+---
+export type GalleryImage = { src: string; alt?: string };
+
+type Props = {
+  images: GalleryImage[];
+  columns?: number;
+  fit?: "cover" | "contain";
+  overlayBg?: string;
+};
+
+const {
+  images,
+  columns = 3,
+  fit = "cover",
+  overlayBg = "rgba(0,0,0,0.6)",
+} = Astro.props as Props;
+---
+
+<div class="g" style={`--cols:${columns}; --fit:${fit}; --overlay:${overlayBg};`}>
+  <div class="grid" data-grid>
+    {images.map((img, i) => (
+      <button class="thumb" type="button" data-index={i} aria-label={`Open foto ${i + 1}`}>
+        <img src={img.src} alt={img.alt ?? ""} loading="lazy" decoding="async" />
+      </button>
+    ))}
+  </div>
+
+  <div class="lb" data-lb aria-hidden="true">
+    <div class="ov" data-close></div>
+
+    <div class="box" role="dialog" aria-modal="true" aria-label="Foto viewer" tabindex="-1" data-box>
+      <button class="x" type="button" data-close aria-label="Sluiten">×</button>
+      <button class="nav l" type="button" data-prev aria-label="Vorige">‹</button>
+
+      <img class="full" data-full src="" alt="" decoding="async" />
+
+      <button class="nav r" type="button" data-next aria-label="Volgende">›</button>
+      <div class="cap" data-cap></div>
+    </div>
+  </div>
+
+  <script define:vars={{ images }}>
+    const root = document.currentScript?.closest(".g");
+    const grid = root?.querySelector("[data-grid]");
+    const lb = root?.querySelector("[data-lb]");
+    const box = root?.querySelector("[data-box]");
+    const full = root?.querySelector("[data-full]");
+    const cap = root?.querySelector("[data-cap]");
+
+    const nextBtn = root?.querySelector("[data-next]");
+    const prevBtn = root?.querySelector("[data-prev]");
+    const closeEls = root?.querySelectorAll("[data-close]");
+
+    let i = 0;
+    let open = false;
+    let lastTrigger = null;
+
+    const mod = (n) => (n + images.length) % images.length;
+
+    function preload(n) {
+      const img = images?.[n];
+      if (!img?.src) return;
+      const p = new Image();
+      p.decoding = "async";
+      p.src = img.src;
+    }
+
+    function render() {
+      const img = images[i];
+      if (!img || !full) return;
+
+      if (full.getAttribute("src") !== img.src) full.setAttribute("src", img.src);
+      full.setAttribute("alt", img.alt || "");
+      if (cap) cap.textContent = img.alt || "";
+
+      preload(mod(i + 1));
+      preload(mod(i - 1));
+    }
+
+    function setOpen(v) {
+      if (!lb) return;
+      open = v;
+      lb.dataset.open = v ? "true" : "false";
+      lb.setAttribute("aria-hidden", v ? "false" : "true");
+      document.documentElement.style.overflow = v ? "hidden" : "";
+      if (v) (box || lb).focus?.();
+      else lastTrigger?.focus?.();
+    }
+
+    function openAt(n, trigger) {
+      i = mod(n);
+      lastTrigger = trigger || lastTrigger;
+      render();
+      setOpen(true);
+    }
+
+    function close() { setOpen(false); }
+    function next() { i = mod(i + 1); render(); }
+    function prev() { i = mod(i - 1); render(); }
+
+    grid?.querySelectorAll("[data-index]")?.forEach((btn) => {
+      const idx = Number(btn.getAttribute("data-index") || "0");
+      btn.addEventListener("click", () => openAt(idx, btn));
+    });
+
+    closeEls?.forEach((el) => el.addEventListener("click", close));
+    nextBtn?.addEventListener("click", next);
+    prevBtn?.addEventListener("click", prev);
+
+    // keyboard
+    window.addEventListener("keydown", (e) => {
+      if (!open) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft") prev();
+    });
+
+    // swipe
+    let sx = 0, sy = 0, active = false;
+    box?.addEventListener("touchstart", (e) => {
+      if (!open) return;
+      const t = e.touches[0];
+      sx = t.clientX; sy = t.clientY; active = true;
+    }, { passive: true });
+
+    box?.addEventListener("touchend", (e) => {
+      if (!active) return;
+      active = false;
+      const t = e.changedTouches[0];
+      const dx = t.clientX - sx;
+      const dy = t.clientY - sy;
+
+      if (Math.abs(dx) < 45) return;
+      if (Math.abs(dx) < Math.abs(dy) * 1.25) return;
+
+      if (dx < 0) next();
+      else prev();
+    }, { passive: true });
+  </script>
+</div>
+
+<style>
+  /* grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    gap: 1rem;
+  }
+  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+
+  .thumb { border: 0; padding: 0; background: transparent; cursor: pointer; }
+  .thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: var(--fit);
+  }
+
+  /* lightbox - simpel en stabiel */
+  .lb {
+    position: fixed; inset: 0; z-index: 9999;
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity 140ms ease, visibility 140ms ease;
+  }
+  .lb[data-open="true"] { opacity: 1; visibility: visible; pointer-events: auto; }
+
+  .ov { position: absolute; inset: 0; background: var(--overlay); }
+
+  .box {
+    position: absolute; inset: 6vh 6vw;
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    gap: .75rem;
+    outline: none;
+  }
+
+  .full {
+    grid-column: 2;
+    max-width: 88vw;
+    max-height: 78vh;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .cap {
+    grid-column: 2;
+    grid-row: 2;
+    color: rgba(255,255,255,0.85);
+    font-size: .95rem;
+    text-align: center;
+    padding: .25rem 0;
+  }
+
+  .nav {
+    border: 0;
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.95);
+    width: 48px; height: 48px;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+    border-radius: 999px;
+  }
+  .nav.l { grid-column: 1; }
+  .nav.r { grid-column: 3; }
+
+  .x {
+    position: absolute;
+    top: 10px; right: 10px;
+    border: 0;
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.95);
+    width: 40px; height: 40px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+</style>

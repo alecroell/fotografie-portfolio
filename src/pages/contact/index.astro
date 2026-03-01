@@ -1,0 +1,173 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="page" aria-labelledby="contact-title">
+    <header class="intro">
+      <h1 id="contact-title">Contact</h1>
+      <p>
+        Neem gerust contact op om je wensen te bespreken of een voorstel aan te vragen.
+      </p>
+    </header>
+
+    <section class="content">
+      <form
+        class="form"
+        action="https://formsubmit.co/alecroell@hotmail.com"
+        method="POST"
+        aria-label="Contactformulier"
+      >
+        <!-- Anti spam -->
+        <input type="text" name="_honey" style="display:none" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="http://localhost:4321/contact" />
+
+        <div class="row">
+          <label class="field">
+            <span class="label">Naam</span>
+            <input class="control" name="Naam" type="text" required />
+          </label>
+
+          <label class="field">
+            <span class="label">E-mail</span>
+            <input class="control" name="E-mail" type="email" required />
+          </label>
+        </div>
+
+        <label class="field">
+          <span class="label">Onderwerp</span>
+          <input class="control" name="Onderwerp" type="text" required />
+        </label>
+
+        <label class="field">
+          <span class="label">Bericht</span>
+          <textarea class="control" name="Bericht" rows="7" required></textarea>
+        </label>
+
+        <div class="submitWrap">
+          <button class="cta submit" type="submit">Versturen</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <style>
+    .page {
+      --accent: #6b3d2e;
+      --line: rgba(107, 61, 46, 0.25);
+      --line-strong: rgba(107, 61, 46, 0.45);
+      --field: rgba(107, 61, 46, 0.03);
+
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+    }
+
+    /* ===== Intro ===== */
+
+    .intro {
+      margin-bottom: 2.5rem;
+    }
+
+    .intro h1 {
+      font-family: ui-serif, Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin: 0 0 0.8rem;
+      color: var(--accent); /* CONTACT nu bruin */
+    }
+
+    .intro p {
+      max-width: 540px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(0, 0, 0, 0.65);
+    }
+
+    /* ===== Content ===== */
+
+    .content {
+      border-top: 1px solid var(--line);
+      padding-top: 2.5rem;
+    }
+
+    /* ===== Form ===== */
+
+    .form {
+      display: grid;
+      gap: 1.2rem;
+      text-align: left;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .field {
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      color: var(--accent);
+    }
+
+    .control {
+      border: 1px solid var(--line);
+      background: var(--field);
+      padding: 0.9rem 1rem;
+      font-size: 0.95rem;
+      font-family: inherit;
+      border-radius: 0;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+
+    .control:focus {
+      border-color: var(--line-strong);
+      background: rgba(107, 61, 46, 0.02);
+    }
+
+    /* ===== Submit perfect center ===== */
+
+    .submitWrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+
+    .cta {
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--accent);
+      padding: 0.85rem 2.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 180ms ease;
+    }
+
+    .cta:hover {
+      background: rgba(107, 61, 46, 0.05);
+      border-color: var(--line-strong);
+    }
+
+    @media (max-width: 640px) {
+      .row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</Layout>

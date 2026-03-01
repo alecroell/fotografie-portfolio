@@ -1,0 +1,148 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getCategory } from "../../../data/portfolio";
+
+const category = getCategory("reizen-plekken");
+if (!category) throw new Error("Category not found");
+---
+
+<Layout title={`Portfolio — ${category.title}`}>
+  <main class="page">
+    <header class="intro">
+      <h1>{category.title}</h1>
+      <p>Kies een album om de foto’s te bekijken.</p>
+    </header>
+
+    <section class="grid" aria-label="Albums">
+      {category.albums.map((album) => (
+        <a class="card" href={`/portfolio/${category.slug}/${album.slug}`}>
+          <figure class="frame">
+            <img src={album.cover} alt={album.title} loading="lazy" decoding="async" />
+          </figure>
+          <div class="meta">
+            <h2>{album.title}</h2>
+            <span class="cta">Bekijk album</span>
+          </div>
+        </a>
+      ))}
+    </section>
+  </main>
+
+  <style>
+    :global(:root) {
+      --accent: #6b3d2e;
+      --ink: #111;
+      --muted: rgba(17, 17, 17, 0.65);
+      --line: rgba(0, 0, 0, 0.14);
+      --max: 1100px;
+    }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 5.5rem;
+      color: var(--ink);
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 2.25rem;
+    }
+
+    .intro h1 {
+      color: var(--accent);
+      font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Garamond, Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin: 0 0 0.75rem;
+      line-height: 1.15;
+    }
+
+    .intro p {
+      margin: 0 auto;
+      max-width: 58ch;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .card {
+      display: grid;
+      gap: 1rem;
+      text-decoration: none;
+      color: inherit;
+      justify-items: center;
+    }
+
+    .frame {
+      width: 100%;
+      margin: 0;
+      border: 1px solid var(--line);
+      background: #fafafa;
+      max-width: 420px;
+    }
+
+    .frame img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+      border-radius: 0;
+      transform: scale(1);
+      transition: transform 220ms ease;
+    }
+
+    .card:hover .frame img {
+      transform: scale(1.02);
+    }
+
+    .meta {
+      text-align: center;
+      display: grid;
+      gap: 0.65rem;
+      justify-items: center;
+    }
+
+    .meta h2 {
+      margin: 0;
+      font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Garamond, Georgia, serif;
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 0.8rem 1.4rem;
+      border: 1px solid var(--line);
+      background: transparent;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      font-size: 0.78rem;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+    }
+
+    .card:hover .cta {
+      border-color: rgba(0, 0, 0, 0.22);
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+      .frame { max-width: 520px; }
+    }
+  </style>
+</Layout>
