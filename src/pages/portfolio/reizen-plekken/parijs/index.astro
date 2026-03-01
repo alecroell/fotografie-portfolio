@@ -1,0 +1,41 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Parijs — Reizen & Plekken">
+  <main>
+    <header class="intro">
+      <h1>Parijs</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/reizen-plekken/parijs/cakeje maken.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/daken.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/gevel.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/gitaartje.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/kijk.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/peukie.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/stom_1.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/stom_2.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/stom_4.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/stom_5.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/stom_6.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/stom.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/vogel.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/yaay.jpg", alt: "Parijs" },
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </main>
+
+  <style>
+    .intro { text-align: center; margin: 0 0 2rem; }
+    .intro h1 { color: var(--accent); margin: 0 0 .5rem; }
+    .intro p { margin: 0; opacity: .75; }
+  </style>
+</Layout>
