@@ -168,19 +168,33 @@ const {
   .ov { position: absolute; inset: 0; background: var(--overlay); }
 
   .box {
-    position: absolute; inset: 6vh 6vw;
+    /* FIX: mobiel-proof centreren + stable viewport units + safe-area */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: min(92svw, 1100px);
+    max-height: 88svh;
+
+    padding: calc(env(safe-area-inset-top, 0px) + 8px)
+             calc(env(safe-area-inset-right, 0px) + 8px)
+             calc(env(safe-area-inset-bottom, 0px) + 8px)
+             calc(env(safe-area-inset-left, 0px) + 8px);
+
     display: grid;
     grid-template-columns: 48px 1fr 48px;
     grid-template-rows: 1fr auto;
     align-items: center;
     gap: .75rem;
     outline: none;
+    box-sizing: border-box;
   }
 
   .full {
     grid-column: 2;
-    max-width: 88vw;
-    max-height: 78vh;
+    max-width: 100%;
+    max-height: calc(88svh - 120px);
     width: auto;
     height: auto;
     display: block;
@@ -220,5 +234,20 @@ const {
     cursor: pointer;
     font-size: 1.5rem;
     line-height: 1;
+  }
+
+  /* extra tuning op mobiel */
+  @media (max-width: 640px) {
+    .box {
+      width: 100svw;
+      max-height: 100svh;
+      padding: calc(env(safe-area-inset-top, 0px) + 10px)
+               calc(env(safe-area-inset-right, 0px) + 10px)
+               calc(env(safe-area-inset-bottom, 0px) + 10px)
+               calc(env(safe-area-inset-left, 0px) + 10px);
+      grid-template-columns: 44px 1fr 44px;
+      gap: .5rem;
+    }
+    .nav { width: 44px; height: 44px; font-size: 1.85rem; }
   }
 </style>
