@@ -1,0 +1,43 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Momo — Portret & Evenement">
+  <main>
+    <header class="intro">
+      <h1>Momo</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/portret-evenement/momo/dfdfd.jpg", alt: "Momo" },
+        { src: "/fotos/portfolio/portret-evenement/momo/peukie.jpg", alt: "Momo" },
+        { src: "/fotos/portfolio/portret-evenement/momo/peukie_1.jpg", alt: "Momo" },
+        { src: "/fotos/portfolio/portret-evenement/momo/peukie_2.jpg", alt: "Momo" },
+        { src: "/fotos/portfolio/portret-evenement/momo/peukie_3.jpg", alt: "Momo" },
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </main>
+
+  <style>
+    .intro {
+      text-align: center;
+      margin: 0 0 2rem;
+    }
+
+    .intro h1 {
+      margin: 0 0 .5rem;
+      color: var(--accent);
+    }
+
+    .intro p {
+      margin: 0;
+      opacity: .75;
+    }
+  </style>
+</Layout>

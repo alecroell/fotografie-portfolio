@@ -26,11 +26,8 @@ export const categories: CategoryMeta[] = [
       { title: "Berlijn", slug: "berlijn", cover: url("/fotos/portfolio/reizen-plekken/berlijn/ubahn.jpg") },
       { title: "Memorial", slug: "memorial", cover: url("/fotos/portfolio/reizen-plekken/memorial/flowerrr.JPG") },
       { title: "Noordwijk", slug: "noordwijk", cover: url("/fotos/portfolio/reizen-plekken/noordwijk/vogel_2.jpg") },
-
-      // ✅ NIEUW: Parijs
-      { title: "Parijs", slug: "parijs", cover: url("/fotos/portfolio/reizen-plekken/parijs/gevel.jpg") },
-
       { title: "Rome", slug: "rome", cover: url("/fotos/portfolio/reizen-plekken/rome/45.jpg") },
+      { title: "Parijs", slug: "parijs", cover: url("/fotos/portfolio/reizen-plekken/parijs/yaay.jpg") },
     ],
   },
   {
@@ -38,6 +35,7 @@ export const categories: CategoryMeta[] = [
     slug: "portret-evenement",
     albums: [
       { title: "Francine", slug: "francine", cover: url("/fotos/portfolio/portret-evenement/francine/Francine.jpeg") },
+      { title: "Momo", slug: "momo", cover: url("/fotos/portfolio/portret-evenement/momo/dfdfd.jpg") },
     ],
   },
   {

@@ -1,14 +1,17 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
+import { getCategory } from "../../../data/portfolio";
 
 const categoryTitle = "Portret & Evenement";
-const albums = [
-  {
-    title: "Francine",
-    href: "/portfolio/portret-evenement/francine",
-    cover: "/fotos/portfolio/portret-evenement/francine/Francine.jpeg",
-  },
-];
+
+// haal albums uit portfolio.ts
+const category = getCategory("portret-evenement");
+const albums =
+  category?.albums.map((a) => ({
+    title: a.title,
+    href: `/portfolio/portret-evenement/${a.slug}`,
+    cover: a.cover,
+  })) ?? [];
 ---
 
 <Layout>
