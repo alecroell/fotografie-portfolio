@@ -35,7 +35,7 @@ export const categories: CategoryMeta[] = [
     slug: "portret-evenement",
     albums: [
       { title: "Francine", slug: "francine", cover: url("/fotos/portfolio/portret-evenement/francine/Francine.jpeg") },
-      { title: "Momo", slug: "momo", cover: url("/fotos/portfolio/portret-evenement/momo/dfdfd.jpg") },
+      { title: "Momo, Maay & Jochem", slug: "momo-maay-jochem", cover: url("/fotos/portfolio/portret-evenement/momo-maay-jochem/maya.jpg") },
     ],
   },
   {

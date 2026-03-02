@@ -1,0 +1,48 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Momo,Maay & Jochem — Portret & Evenement">
+  <main>
+    <header class="intro">
+      <h1>Momo, Maay & Jochem</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/portret-evenement/momo-maay-jochem/dfdfd.jpg", alt: "Momo,Maay & Jochem" },
+        { src: "/fotos/portfolio/portret-evenement/momo-maay-jochem/hgh.jpg", alt: "Momo,Maay & Jochem" },
+        { src: "/fotos/portfolio/portret-evenement/momo-maay-jochem/maya.jpg", alt: "Momo,Maay & Jochem" },
+        { src: "/fotos/portfolio/portret-evenement/momo-maay-jochem/peukie_1.jpg", alt: "Momo,Maay & Jochem" },
+        { src: "/fotos/portfolio/portret-evenement/momo-maay-jochem/peukie_2.jpg", alt: "Momo,Maay & Jochem" },
+        { src: "/fotos/portfolio/portret-evenement/momo-maay-jochem/peukie_5.jpg", alt: "Momo,Maay & Jochem" },
+        { src: "/fotos/portfolio/portret-evenement/momo-maay-jochem/peukie_4.jpg", alt: "Momo,Maay & Jochem" },
+        { src: "/fotos/portfolio/portret-evenement/momo-maay-jochem/peukie_6.jpg", alt: "Momo,Maay & Jochem" },
+        { src: "/fotos/portfolio/portret-evenement/momo-maay-jochem/peukie_7.jpg", alt: "Momo,Maay & Jochem" },
+        { src: "/fotos/portfolio/portret-evenement/momo-maay-jochem/peukie.jpg", alt: "Momo,Maay & Jochem" },
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </main>
+
+  <style>
+    .intro {
+      text-align: center;
+      margin: 0 0 2rem;
+    }
+
+    .intro h1 {
+      margin: 0 0 .5rem;
+      color: var(--accent);
+    }
+
+    .intro p {
+      margin: 0;
+      opacity: .75;
+    }
+  </style>
+</Layout>
