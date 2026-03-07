@@ -39,12 +39,13 @@ export const categories: CategoryMeta[] = [
     ],
   },
   {
-    title: "Product & Interieur",
-    slug: "product-interieur",
-    albums: [
-      { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/product-interieur/wienshout/lw hout stoel2.jpg") },
-    ],
-  },
+  title: "Product & Interieur",
+  slug: "product-interieur",
+  albums: [
+    { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/product-interieur/la-divine/cake2.jpg") },
+    { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/product-interieur/wienshout/lw hout stoel2.jpg") },
+  ],
+},
 ];
 
 export function getCategory(slug: CategorySlug) {

@@ -1,0 +1,41 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="La Divine — Product & Interieur">
+  <main>
+    <header class="intro">
+      <h1>La Divine</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/product-interieur/la-divine/cake2.jpg", alt: "La Divine" },
+        { src: "/fotos/portfolio/product-interieur/la-divine/cakeje%20maken.jpg", alt: "La Divine" },
+        { src: "/fotos/portfolio/product-interieur/la-divine/snoef_3.jpg", alt: "La Divine" },
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </main>
+
+  <style>
+    .intro {
+      text-align: center;
+      margin: 0 0 2rem;
+    }
+
+    .intro h1 {
+      margin: 0 0 0.5rem;
+      color: var(--accent);
+    }
+
+    .intro p {
+      margin: 0;
+      opacity: 0.75;
+    }
+  </style>
+</Layout>
