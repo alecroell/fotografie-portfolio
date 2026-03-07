@@ -1,14 +1,16 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
+import { getCategory } from "../../../data/portfolio";
 
 const categoryTitle = "Product & Interieur";
-const albums = [
-  {
-    title: "Wienshout",
-    href: "/portfolio/product-interieur/wienshout",
-    cover: "/fotos/portfolio/product-interieur/wienshout/lw%20hout%20stoel2.jpg",
-  },
-];
+
+const category = getCategory("product-interieur");
+const albums =
+  category?.albums.map((a) => ({
+    title: a.title,
+    href: `/portfolio/product-interieur/${a.slug}`,
+    cover: a.cover,
+  })) ?? [];
 ---
 
 <Layout>
@@ -143,6 +145,7 @@ const albums = [
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2.5rem;
       }
+
       .card {
         max-width: 420px;
       }
