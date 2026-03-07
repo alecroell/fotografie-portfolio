@@ -42,7 +42,7 @@ export const categories: CategoryMeta[] = [
   title: "Product & Interieur",
   slug: "product-interieur",
   albums: [
-    { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/product-interieur/la-divine/cake2.jpg") },
+    { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/product-interieur/la-divine/cakeje%maken.jpg") },
     { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/product-interieur/wienshout/lw hout stoel2.jpg") },
   ],
 },
