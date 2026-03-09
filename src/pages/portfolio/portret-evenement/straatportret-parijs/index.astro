@@ -1,0 +1,25 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Straatportret Parijs — Portret & Evenement">
+  <section class="page">
+    <header class="intro">
+      <h1>Straatportret Parijs</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/portret-evenement/straatportret-parijs/dsdds.jpg", alt: "Straatportret Parijs" },
+        { src: "/fotos/portfolio/portret-evenement/straatportret-parijs/dsds.jpg", alt: "Straatportret Parijs" },
+        { src: "/fotos/portfolio/portret-evenement/straatportret-parijs/dsdssds.jpg", alt: "Straatportret Parijs" },
+        { src: "/fotos/portfolio/portret-evenement/straatportret-parijs/fd.jpg", alt: "Straatportret Parijs" }
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+</Layout>
