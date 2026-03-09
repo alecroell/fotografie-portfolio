@@ -4,7 +4,7 @@ import LightboxGallery from "../../../../components/LightboxGallery.astro";
 ---
 
 <Layout title="Wienshout — Product & Interieur">
-  <main>
+  <section class="page">
     <header class="intro">
       <h1>Wienshout</h1>
       <p>Klik op een foto om te vergroten.</p>
@@ -17,17 +17,18 @@ import LightboxGallery from "../../../../components/LightboxGallery.astro";
         { src: "/fotos/portfolio/product-interieur/wienshout/kampie%20wood%202.jpg", alt: "Wienshout" },
         { src: "/fotos/portfolio/product-interieur/wienshout/kampie%20wood.jpg", alt: "Wienshout" },
         { src: "/fotos/portfolio/product-interieur/wienshout/lw%20hout%20stoel2.jpg", alt: "Wienshout" },
-        { src: "/fotos/portfolio/product-interieur/wienshout/wood%20ezel.jpg", alt: "Wienshout" },
+        { src: "/fotos/portfolio/product-interieur/wienshout/wood%20ezel.jpg", alt: "Wienshout" }
       ]}
       columns={3}
       fit="cover"
       overlayBg="rgba(0,0,0,0.6)"
     />
-  </main>
+  </section>
 
   <style>
-    .intro { text-align:center; margin: 0 0 2rem; }
-    .intro h1 { color: var(--accent); margin: 0 0 .5rem; }
-    .intro p { margin: 0; opacity: .75; }
+    .intro p {
+      text-align: center;
+      opacity: 0.75;
+    }
   </style>
 </Layout>

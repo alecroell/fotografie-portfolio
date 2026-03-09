@@ -24,10 +24,10 @@ export const categories: CategoryMeta[] = [
     slug: "reizen-plekken",
     albums: [
       { title: "Berlijn", slug: "berlijn", cover: url("/fotos/portfolio/reizen-plekken/berlijn/ubahn.jpg") },
-      { title: "Memorial", slug: "memorial", cover: url("/fotos/portfolio/reizen-plekken/memorial/flowerrr.JPG") },
-      { title: "Noordwijk", slug: "noordwijk", cover: url("/fotos/portfolio/reizen-plekken/noordwijk/vogel_2.jpg") },
-      { title: "Rome", slug: "rome", cover: url("/fotos/portfolio/reizen-plekken/rome/455.jpg") },
       { title: "Parijs", slug: "parijs", cover: url("/fotos/portfolio/reizen-plekken/parijs/yaay.jpg") },
+      { title: "Rome", slug: "rome", cover: url("/fotos/portfolio/reizen-plekken/rome/455.jpg") },
+      { title: "Noordwijk", slug: "noordwijk", cover: url("/fotos/portfolio/reizen-plekken/noordwijk/vogel_2.jpg") },
+      { title: "Memorial", slug: "memorial", cover: url("/fotos/portfolio/reizen-plekken/memorial/flowerrr.JPG") },
     ],
   },
   {

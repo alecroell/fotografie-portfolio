@@ -4,7 +4,7 @@ import LightboxGallery from "../../../../components/LightboxGallery.astro";
 ---
 
 <Layout title="Parijs — Reizen & Plekken">
-  <main>
+  <section class="page">
     <header class="intro">
       <h1>Parijs</h1>
       <p>Klik op een foto om te vergroten.</p>
@@ -25,17 +25,11 @@ import LightboxGallery from "../../../../components/LightboxGallery.astro";
         { src: "/fotos/portfolio/reizen-plekken/parijs/stom_6.jpg", alt: "Parijs" },
         { src: "/fotos/portfolio/reizen-plekken/parijs/stom.jpg", alt: "Parijs" },
         { src: "/fotos/portfolio/reizen-plekken/parijs/vogel.jpg", alt: "Parijs" },
-        { src: "/fotos/portfolio/reizen-plekken/parijs/yaay.jpg", alt: "Parijs" },
+        { src: "/fotos/portfolio/reizen-plekken/parijs/yaay.jpg", alt: "Parijs" }
       ]}
       columns={3}
       fit="cover"
       overlayBg="rgba(0,0,0,0.6)"
     />
-  </main>
-
-  <style>
-    .intro { text-align: center; margin: 0 0 2rem; }
-    .intro h1 { color: var(--accent); margin: 0 0 .5rem; }
-    .intro p { margin: 0; opacity: .75; }
-  </style>
+  </section>
 </Layout>

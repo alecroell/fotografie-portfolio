@@ -4,7 +4,7 @@ import LightboxGallery from "../../../../components/LightboxGallery.astro";
 ---
 
 <Layout title="Rome — Reizen & Plekken">
-  <main class="page">
+  <section class="page">
     <header class="intro">
       <h1>Rome</h1>
       <p>Klik op een foto om te vergroten.</p>
@@ -14,30 +14,11 @@ import LightboxGallery from "../../../../components/LightboxGallery.astro";
       images={[
         { src: "/fotos/portfolio/reizen-plekken/rome/455.jpg", alt: "Rome" },
         { src: "/fotos/portfolio/reizen-plekken/rome/1000002627.jpg", alt: "Rome" },
-        { src: "/fotos/portfolio/reizen-plekken/rome/10000029901.jpg", alt: "Rome" },
+        { src: "/fotos/portfolio/reizen-plekken/rome/10000029901.jpg", alt: "Rome" }
       ]}
       columns={3}
       fit="contain"
       overlayBg="rgba(0,0,0,0.55)"
     />
-  </main>
-
-  <style>
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .intro {
-      text-align: center;
-      margin: 0 0 2rem;
-    }
-    .intro h1 {
-      color: var(--accent);
-      margin: 0 0 .5rem;
-    }
-    .intro p {
-      margin: 0;
-      opacity: .75;
-    }
-  </style>
+  </section>
 </Layout>
