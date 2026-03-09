@@ -2,86 +2,75 @@
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout>
-  <main class="page">
+<Layout title="Portfolio | ALECROELLFOTOGRAFIE">
+  <section class="page">
     <header class="intro">
       <h1>Portfolio</h1>
       <p>Kies een categorie om albums te bekijken.</p>
     </header>
 
     <section class="categories">
-
-      <!-- Reizen & Plekken -->
       <article class="card">
         <a href="/portfolio/reizen-plekken">
-          <img 
-            src="/fotos/portfolio/reizen-plekken/berlijn/ubahn.jpg" 
+          <img
+            src="/fotos/portfolio/reizen-plekken/berlijn/ubahn.jpg"
             alt="Reizen & Plekken"
           />
           <h2>Reizen & Plekken</h2>
-          <span class="button">Bekijk Albums</span>
+          <span class="cta">Bekijk albums</span>
         </a>
       </article>
 
-      <!-- Portret & Evenement -->
       <article class="card">
         <a href="/portfolio/portret-evenement">
-          <img 
-            src="/fotos/portfolio/portret-evenement/francine/Francine.jpeg" 
+          <img
+            src="/fotos/portfolio/portret-evenement/francine/Francine.jpeg"
             alt="Portret & Evenement"
           />
           <h2>Portret & Evenement</h2>
-          <span class="button">Bekijk Albums</span>
+          <span class="cta">Bekijk albums</span>
         </a>
       </article>
 
-      <!-- Product & Interieur -->
       <article class="card">
         <a href="/portfolio/product-interieur">
-          <img 
-            src="/fotos/portfolio/product-interieur/wienshout/lw hout stoel2.jpg" 
+          <img
+            src="/fotos/portfolio/product-interieur/wienshout/lw hout stoel2.jpg"
             alt="Product & Interieur"
           />
           <h2>Product & Interieur</h2>
-          <span class="button">Bekijk Albums</span>
+          <span class="cta">Bekijk albums</span>
         </a>
       </article>
-
     </section>
-  </main>
+  </section>
 
   <style>
-    .page {
-      text-align: center;
-    }
-
-    .intro {
-      margin-bottom: 3rem;
-    }
-
-    .intro h1 {
-      color: var(--accent);
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
     .categories {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 3rem;
+      align-items: start;
+    }
+
+    .card {
+      text-align: center;
     }
 
     .card a {
       text-decoration: none;
       color: inherit;
+      display: block;
     }
 
     .card img {
       width: 100%;
-      height: 420px;
+      aspect-ratio: 4 / 5;
       object-fit: cover;
-      border: 1px solid rgba(0,0,0,0.15);
+      display: block;
+      border: 1px solid rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease;
+      background: #fafafa;
     }
 
     .card img:hover {
@@ -89,18 +78,12 @@ import Layout from "../../layouts/Layout.astro";
     }
 
     .card h2 {
-      margin: 1.2rem 0 0.5rem;
+      margin: 1.2rem 0 1rem;
       color: var(--accent);
+      font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino,
+        Garamond, Georgia, serif;
       font-weight: 600;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 0.6rem 1.4rem;
-      border: 1px solid rgba(0,0,0,0.2);
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      font-size: 1.2rem;
     }
 
     @media (max-width: 900px) {

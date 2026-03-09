@@ -2,8 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout>
-  <main class="page" aria-labelledby="contact-title">
+<Layout title="Contact | ALECROELLFOTOGRAFIE">
+  <section class="page page--narrow" aria-labelledby="contact-title">
     <header class="intro">
       <h1 id="contact-title">Contact</h1>
       <p>
@@ -11,14 +11,13 @@ import Layout from "../../layouts/Layout.astro";
       </p>
     </header>
 
-    <section class="content">
+    <section class="contactContent">
       <form
         class="form"
         action="https://formsubmit.co/alecroell@hotmail.com"
         method="POST"
         aria-label="Contactformulier"
       >
-        <!-- Anti spam -->
         <input type="text" name="_honey" style="display:none" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_next" value="http://localhost:4321/contact" />
@@ -50,51 +49,13 @@ import Layout from "../../layouts/Layout.astro";
         </div>
       </form>
     </section>
-  </main>
+  </section>
 
   <style>
-    .page {
-      --accent: #6b3d2e;
-      --line: rgba(107, 61, 46, 0.25);
-      --line-strong: rgba(107, 61, 46, 0.45);
-      --field: rgba(107, 61, 46, 0.03);
-
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0;
-      text-align: center;
-    }
-
-    /* ===== Intro ===== */
-
-    .intro {
-      margin-bottom: 2.5rem;
-    }
-
-    .intro h1 {
-      font-family: ui-serif, Georgia, serif;
-      font-weight: 600;
-      font-size: clamp(2rem, 3vw, 2.8rem);
-      margin: 0 0 0.8rem;
-      color: var(--accent); /* CONTACT nu bruin */
-    }
-
-    .intro p {
-      max-width: 540px;
-      margin: 0 auto;
-      font-size: 1rem;
-      line-height: 1.7;
-      color: rgba(0, 0, 0, 0.65);
-    }
-
-    /* ===== Content ===== */
-
-    .content {
-      border-top: 1px solid var(--line);
+    .contactContent {
+      border-top: 1px solid rgba(107, 61, 46, 0.25);
       padding-top: 2.5rem;
     }
-
-    /* ===== Form ===== */
 
     .form {
       display: grid;
@@ -118,11 +79,13 @@ import Layout from "../../layouts/Layout.astro";
       text-transform: uppercase;
       letter-spacing: 1.6px;
       color: var(--accent);
+      font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino,
+        Garamond, Georgia, serif;
     }
 
     .control {
-      border: 1px solid var(--line);
-      background: var(--field);
+      border: 1px solid rgba(107, 61, 46, 0.25);
+      background: rgba(107, 61, 46, 0.03);
       padding: 0.9rem 1rem;
       font-size: 0.95rem;
       font-family: inherit;
@@ -134,11 +97,9 @@ import Layout from "../../layouts/Layout.astro";
     }
 
     .control:focus {
-      border-color: var(--line-strong);
+      border-color: rgba(107, 61, 46, 0.45);
       background: rgba(107, 61, 46, 0.02);
     }
-
-    /* ===== Submit perfect center ===== */
 
     .submitWrap {
       display: flex;
@@ -146,22 +107,8 @@ import Layout from "../../layouts/Layout.astro";
       margin-top: 0.5rem;
     }
 
-    .cta {
-      border: 1px solid var(--line);
-      background: transparent;
-      color: var(--accent);
-      padding: 0.85rem 2.2rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.75rem;
-      font-weight: 600;
+    .submit {
       cursor: pointer;
-      transition: all 180ms ease;
-    }
-
-    .cta:hover {
-      background: rgba(107, 61, 46, 0.05);
-      border-color: var(--line-strong);
     }
 
     @media (max-width: 640px) {

@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Alec Roell Fotografie">
-  <main class="page">
+  <section class="page">
     <header class="intro" aria-labelledby="home-title">
       <h1 id="home-title">Welkom!</h1>
       <p>
@@ -40,52 +40,9 @@ import Layout from "../layouts/Layout.astro";
         </a>
       </article>
     </section>
-  </main>
+  </section>
 
   <style>
-    :global(:root) {
-      --ink: #111;
-      --muted: #4b4b4b;
-      --line: rgba(0, 0, 0, 0.14);
-      --paper: #fff;
-      --max: 1100px;
-      --accent: #6b3d2e; /* bruin */
-    }
-
-    .page {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 3.5rem 1.5rem 5rem;
-      color: var(--ink);
-      background: var(--paper);
-    }
-
-    .intro {
-      text-align: center;
-      margin-bottom: 2.75rem;
-    }
-
-    .intro h1 {
-      font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino,
-        Garamond, Georgia, serif;
-      font-weight: 600;
-      letter-spacing: 0.2px;
-      font-size: clamp(2.05rem, 3vw, 3rem);
-      line-height: 1.15;
-      margin: 0 0 0.75rem;
-      color: var(--accent);
-    }
-
-    .intro p {
-      max-width: 62ch;
-      margin: 0 auto;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
-        Arial, "Noto Sans", "Liberation Sans", sans-serif;
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: var(--muted);
-    }
-
     .tiles {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -132,31 +89,12 @@ import Layout from "../layouts/Layout.astro";
       transform: scale(1.02);
     }
 
-    .cta {
-      display: inline-block;
-      padding: 0.85rem 1.6rem;
-      border: 1px solid var(--line);
-      background: transparent;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 600;
-      font-size: 0.82rem;
-      font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino,
-        Garamond, Georgia, serif;
-      color: var(--accent);
-      transition: background 180ms ease, border-color 180ms ease;
-    }
-
-    .tileLink:hover .cta {
-      background: rgba(107, 61, 46, 0.04);
-      border-color: rgba(107, 61, 46, 0.35);
-    }
-
     @media (max-width: 920px) {
       .tiles {
         grid-template-columns: 1fr;
         gap: 2.25rem;
       }
+
       .tileLink {
         max-width: 520px;
       }
