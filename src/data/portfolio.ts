@@ -6,7 +6,8 @@ export type CategorySlug =
 export type AlbumMeta = {
   title: string;
   slug: string;
-  cover: string; // pad vanaf / (public)
+  cover: string;
+  position?: string;
 };
 
 export type CategoryMeta = {
@@ -26,8 +27,13 @@ export const categories: CategoryMeta[] = [
       { title: "Berlijn", slug: "berlijn", cover: url("/fotos/portfolio/reizen-plekken/berlijn/ubahn.jpg") },
       { title: "Parijs", slug: "parijs", cover: url("/fotos/portfolio/reizen-plekken/parijs/yaay.jpg") },
       { title: "Rome", slug: "rome", cover: url("/fotos/portfolio/reizen-plekken/rome/455.jpg") },
-      { title: "Noordwijk", slug: "noordwijk", cover: url("/fotos/portfolio/reizen-plekken/noordwijk/vogel_2.jpg") },
-      { title: "Memorial", slug: "memorial", cover: url("/fotos/portfolio/reizen-plekken/memorial/flowerrr.JPG") },
+      { 
+        title: "Noordwijk",
+        slug: "noordwijk",
+        cover: url("/fotos/portfolio/reizen-plekken/noordwijk/vogel_6.jpg"),
+        position: "25% center"
+      },
+      { title: "Memorial", slug: "memorial", cover: url("/fotos/portfolio/reizen-plekken/memorial/memorial of the jews.jpg") },
     ],
   },
   {
@@ -40,13 +46,13 @@ export const categories: CategoryMeta[] = [
     ],
   },
   {
-  title: "Product & Interieur",
-  slug: "product-interieur",
-  albums: [
-    { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/product-interieur/la-divine/cakeje%20maken.jpg") },
-    { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/product-interieur/wienshout/lw hout stoel2.jpg") },
-  ],
-},
+    title: "Product & Interieur",
+    slug: "product-interieur",
+    albums: [
+      { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/product-interieur/la-divine/cakeje%20maken.jpg") },
+      { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/product-interieur/wienshout/lw hout stoel2.jpg") },
+    ],
+  },
 ];
 
 export function getCategory(slug: CategorySlug) {
