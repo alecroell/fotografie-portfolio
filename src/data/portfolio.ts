@@ -51,6 +51,7 @@ export const categories: CategoryMeta[] = [
     albums: [
       { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/product-interieur/la-divine/cakeje%20maken.jpg") },
       { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/product-interieur/wienshout/lw hout stoel2.jpg") },
+      { title: "MØS", slug: "mos", cover: url("/fotos/portfolio/product-interieur/MOS/mos koffie lekker_5.jpg") },
     ],
   },
 ];
