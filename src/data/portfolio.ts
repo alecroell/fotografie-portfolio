@@ -24,7 +24,6 @@ export const categories: CategoryMeta[] = [
     title: "Reizen & Plekken",
     slug: "reizen-plekken",
     albums: [
-      { title: "Berlijn", slug: "berlijn", cover: url("/fotos/portfolio/reizen-plekken/berlijn/ubahn.jpg") },
       { title: "Parijs", slug: "parijs", cover: url("/fotos/portfolio/reizen-plekken/parijs/yaay.jpg") },
       { title: "Rome", slug: "rome", cover: url("/fotos/portfolio/reizen-plekken/rome/455.jpg") },
       { 
@@ -34,6 +33,7 @@ export const categories: CategoryMeta[] = [
         position: "25% center"
       },
       { title: "Memorial", slug: "memorial", cover: url("/fotos/portfolio/reizen-plekken/memorial/memorial of the jews.jpg") },
+      { title: "Berlijn", slug: "berlijn", cover: url("/fotos/portfolio/reizen-plekken/berlijn/hjhj.jpg") },
     ],
   },
   {
