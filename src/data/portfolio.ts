@@ -40,9 +40,10 @@ export const categories: CategoryMeta[] = [
     title: "Portret & Evenement",
     slug: "portret-evenement",
     albums: [
-      { title: "Francine", slug: "francine", cover: url("/fotos/portfolio/portret-evenement/francine/Francine.jpeg") },
+      { title: "Telusa Lente Viering", slug: "telusa-lente-viering", cover: url("/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa_17.jpg")},
       { title: "Momo, Maay & Jochem", slug: "momo-maay-jochem", cover: url("/fotos/portfolio/portret-evenement/momo-maay-jochem/maya.jpg") },
-      { title: "Straatportret Parijs", slug: "straatportret-parijs", cover: "/fotos/portfolio/portret-evenement/straatportret-parijs/cafe.jpg" }
+      { title: "Straatportret Parijs", slug: "straatportret-parijs", cover: "/fotos/portfolio/portret-evenement/straatportret-parijs/cafe.jpg" },
+      { title: "Francine", slug: "francine", cover: url("/fotos/portfolio/portret-evenement/francine/Francine.jpeg") }
     ],
   },
   {

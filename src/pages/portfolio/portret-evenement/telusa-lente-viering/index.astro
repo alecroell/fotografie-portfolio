@@ -1,0 +1,30 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Telusa Lente Viering — Portret & Evenement">
+  <section class="page">
+    <header class="intro">
+      <h1>Telusa Lente Viering</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa_17.jpg", alt: "Telusa Lente Viering" },
+        { src: "/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa_9.jpg", alt: "Telusa Lente Viering" },
+        { src: "/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa_43.jpg", alt: "Telusa Lente Viering" },
+        { src: "/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa_15.jpg", alt: "Telusa Lente Viering" },
+        { src: "/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa_29.jpg", alt: "Telusa Lente Viering" },
+        { src: "/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa.jpg", alt: "Telusa Lente Viering" },
+        { src: "/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa_35.jpg", alt: "Telusa Lente Viering" },
+        { src: "/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa_37.jpg", alt: "Telusa Lente Viering" },
+        { src: "/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa_27.jpg", alt: "Telusa Lente Viering" }
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+</Layout>
