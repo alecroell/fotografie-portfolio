@@ -1,0 +1,34 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Wienshout — Bedrijf">
+  <section class="page">
+    <header class="intro">
+      <h1>Wienshout</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/bedrijf/wienshout/gegegf.jpg", alt: "Wienshout" },
+        { src: "/fotos/portfolio/bedrijf/wienshout/gg.jpg", alt: "Wienshout" },
+        { src: "/fotos/portfolio/bedrijf/wienshout/kampie%20wood%202.jpg", alt: "Wienshout" },
+        { src: "/fotos/portfolio/bedrijf/wienshout/kampie%20wood.jpg", alt: "Wienshout" },
+        { src: "/fotos/portfolio/bedrijf/wienshout/lw%20hout%20stoel2.jpg", alt: "Wienshout" },
+        { src: "/fotos/portfolio/bedrijf/wienshout/wood%20ezel.jpg", alt: "Wienshout" }
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+
+  <style>
+    .intro p {
+      text-align: center;
+      opacity: 0.75;
+    }
+  </style>
+</Layout>

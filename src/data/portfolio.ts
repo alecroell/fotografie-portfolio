@@ -1,7 +1,7 @@
 export type CategorySlug =
   | "reizen-plekken"
   | "portret-evenement"
-  | "product-interieur";
+  | "bedrijf";
 
 export type AlbumMeta = {
   title: string;
@@ -47,12 +47,12 @@ export const categories: CategoryMeta[] = [
     ],
   },
   {
-    title: "Product & Interieur",
-    slug: "product-interieur",
+    title: "Bedrijf",
+    slug: "bedrijf",
     albums: [
-      { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/product-interieur/la-divine/cakeje%20maken.jpg") },
-      { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/product-interieur/wienshout/lw hout stoel2.jpg") },
-      { title: "MØS", slug: "mos", cover: url("/fotos/portfolio/product-interieur/mos/foto cafe mos.jpg") },
+      { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/bedrijf/la-divine/cakeje%20maken.jpg") },
+      { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/bedrijf/wienshout/lw hout stoel2.jpg") },
+      { title: "MØS", slug: "mos", cover: url("/fotos/portfolio/bedrijf/mos/foto cafe mos.jpg") },
     ],
   },
 ];

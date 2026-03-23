@@ -1,0 +1,30 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="MØS — Bedrijf">
+  <section class="page">
+    <header class="intro">
+      <h1>MØS</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+   <LightboxGallery
+  images={[
+    { src: "/fotos/portfolio/bedrijf/mos/foto cafe mos.jpg", alt: "MØS" },
+    { src: "/fotos/portfolio/bedrijf/mos/mos koffie_9.jpg", alt: "MØS" },
+    { src: "/fotos/portfolio/bedrijf/mos/mos.jpg", alt: "MØS" },
+    { src: "/fotos/portfolio/bedrijf/mos/mos_4.jpg", alt: "MØS" },
+    { src: "/fotos/portfolio/bedrijf/mos/cafe.jpg", alt: "MØS" },
+    { src: "/fotos/portfolio/bedrijf/mos/mos koffie_1.jpg", alt: "MØS" },
+    { src: "/fotos/portfolio/bedrijf/mos/musje_1.jpg", alt: "MØS" },
+    { src: "/fotos/portfolio/bedrijf/mos/mos koffie_17.jpg", alt: "MØS" },
+    { src: "/fotos/portfolio/bedrijf/mos/studeren_1.jpg", alt: "MØS" },
+  ]}
+  columns={3}
+  fit="cover"
+  overlayBg="rgba(0,0,0,0.6)"
+/>
+  </section>
+</Layout>
