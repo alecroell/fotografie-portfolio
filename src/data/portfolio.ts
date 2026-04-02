@@ -24,26 +24,22 @@ export const categories: CategoryMeta[] = [
     title: "Reizen & Plekken",
     slug: "reizen-plekken",
     albums: [
-      { title: "Parijs", slug: "parijs", cover: url("/fotos/portfolio/reizen-plekken/parijs/yaay.jpg") },
+      { title: "Parijs", slug: "parijs", cover: url("/fotos/portfolio/reizen-plekken/parijs/vogel.jpg") },
+      { title: "Berlijn", slug: "berlijn", cover: url("/fotos/portfolio/reizen-plekken/berlijn/df.jpg") },
       { title: "Rome", slug: "rome", cover: url("/fotos/portfolio/reizen-plekken/rome/455.jpg") },
-      { 
-        title: "Noordwijk",
-        slug: "noordwijk",
-        cover: url("/fotos/portfolio/reizen-plekken/noordwijk/vogel_6.jpg"),
-        position: "25% center"
-      },
+      {title: "Noordwijk Strand", slug: "noordwijk-strand", cover: url("/fotos/portfolio/reizen-plekken/noordwijk-strand/vogel_6.jpg"),position: "25% center"},
       { title: "Memorial", slug: "memorial", cover: url("/fotos/portfolio/reizen-plekken/memorial/memorial of the jews.jpg") },
-      { title: "Berlijn", slug: "berlijn", cover: url("/fotos/portfolio/reizen-plekken/berlijn/hjhj.jpg") },
     ],
   },
   {
     title: "Portret & Evenement",
     slug: "portret-evenement",
     albums: [
+      { title: "Interdisciplinair Diner", slug: "interdisciplinair-diner", cover: url("/fotos/portfolio/portret-evenement/interdisciplinair-diner/diner ai creativiteit_37.jpg")},
       { title: "Telusa Lente Viering", slug: "telusa-lente-viering", cover: url("/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa_17.jpg")},
       { title: "Momo, Maay & Jochem", slug: "momo-maay-jochem", cover: url("/fotos/portfolio/portret-evenement/momo-maay-jochem/maya.jpg") },
       { title: "Straatportret Parijs", slug: "straatportret-parijs", cover: "/fotos/portfolio/portret-evenement/straatportret-parijs/cafe.jpg" },
-      { title: "Francine", slug: "francine", cover: url("/fotos/portfolio/portret-evenement/francine/Francine.jpeg") }
+      { title: "Francine", slug: "francine", cover: url("/fotos/portfolio/portret-evenement/francine/Francine.jpeg") },
     ],
   },
   {

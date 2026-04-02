@@ -1,0 +1,30 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Interdisciplinair Diner — Portret & Evenement">
+  <section class="page">
+    <header class="intro">
+      <h1>Interdisciplinair Diner</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/portret-evenement/interdisciplinair-diner/diner ai creativiteit_2.jpg", alt: "Interdisciplinair Diner" },
+        { src: "/fotos/portfolio/portret-evenement/interdisciplinair-diner/diner ai creativiteit_37.jpg", alt: "Interdisciplinair Diner" },
+        { src: "/fotos/portfolio/portret-evenement/interdisciplinair-diner/diner ai creativiteit_36.jpg", alt: "Interdisciplinair Diner" },
+        { src: "/fotos/portfolio/portret-evenement/interdisciplinair-diner/diner ai creativiteit_7.jpg", alt: "Interdisciplinair Diner" },
+        { src: "/fotos/portfolio/portret-evenement/interdisciplinair-diner/diner ai creativiteit_19.jpg", alt: "Interdisciplinair Diner" },
+        { src: "/fotos/portfolio/portret-evenement/interdisciplinair-diner/diner ai creativiteit_34.jpg", alt: "Interdisciplinair Diner" },
+        { src: "/fotos/portfolio/portret-evenement/interdisciplinair-diner/diner ai creativiteit_32.jpg", alt: "Interdisciplinair Diner" },
+        { src: "/fotos/portfolio/portret-evenement/interdisciplinair-diner/diner ai creativiteit_11.jpg", alt: "Interdisciplinair Diner" },
+        { src: "/fotos/portfolio/portret-evenement/interdisciplinair-diner/diner ai creativiteit_16.jpg", alt: "Interdisciplinair Diner" },
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+</Layout>

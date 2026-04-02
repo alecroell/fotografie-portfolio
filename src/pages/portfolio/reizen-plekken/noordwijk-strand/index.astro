@@ -1,0 +1,25 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Noordwijk Strand — Reizen & Plekken">
+  <section class="page">
+    <header class="intro">
+      <h1>Noordwijk Strand</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/reizen-plekken/noordwijk-strand/vogel_2.jpg", alt: "Noordwijk Strand" },
+        { src: "/fotos/portfolio/reizen-plekken/noordwijk-strand/vogel_3.jpg", alt: "Noordwijk Strand" },
+        { src: "/fotos/portfolio/reizen-plekken/noordwijk-strand/vogel_10.jpg", alt: "Noordwijk Strand" },
+        { src: "/fotos/portfolio/reizen-plekken/noordwijk-strand/vogel_6.jpg", alt: "Noordwijk Strand" }
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+</Layout>
