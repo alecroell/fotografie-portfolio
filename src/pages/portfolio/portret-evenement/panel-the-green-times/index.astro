@@ -1,0 +1,27 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Panel — The Green Times — Portret & Evenement">
+  <section class="page">
+    <header class="intro">
+      <h1>Panel — The Green Times</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/portret-evenement/panel-the-green-times/DSC031474.JPG", alt: "Panel — The Green Times" },
+        { src: "/fotos/portfolio/portret-evenement/panel-the-green-times/TGT 5.jpg", alt: "Panel — The Green Times" },
+        { src: "/fotos/portfolio/portret-evenement/panel-the-green-times/TGT.jpg", alt: "Panel — The Green Times" },
+        { src: "/fotos/portfolio/portret-evenement/panel-the-green-times/The Green Times_9.jpg", alt: "Panel — The Green Times" },
+        { src: "/fotos/portfolio/portret-evenement/panel-the-green-times/DSC031125.JPG", alt: "Panel — The Green Times" },
+        { src: "/fotos/portfolio/portret-evenement/panel-the-green-times/The Green Times_8.jpg", alt: "Panel — The Green Times" }
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+</Layout>

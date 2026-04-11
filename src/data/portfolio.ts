@@ -35,7 +35,7 @@ export const categories: CategoryMeta[] = [
     title: "Portret & Evenement",
     slug: "portret-evenement",
     albums: [
-      { title: "Panel - The Green House", slug: "panel-the-green-house", cover: url("/fotos/portfolio/portret-evenement/panel-the-green-house/DSC031125.JPG"),position: "25% center"},
+      { title: "Panel - The Green Times", slug: "panel-the-green-times", cover: url("/fotos/portfolio/portret-evenement/panel-the-green-times/DSC031125.JPG"),position: "25% center"},
       { title: "Social Impact Factory", slug: "social-impact-factory", cover: url("/fotos/portfolio/portret-evenement/social-impact-factory/natulatte_4.jpg")},
       { title: "Interdisciplinair Diner", slug: "interdisciplinair-diner", cover: url("/fotos/portfolio/portret-evenement/interdisciplinair-diner/diner ai creativiteit_37.jpg")},
       { title: "Telusa Lente Viering", slug: "telusa-lente-viering", cover: url("/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa_17.jpg")},
