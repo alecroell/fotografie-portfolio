@@ -35,6 +35,7 @@ export const categories: CategoryMeta[] = [
     title: "Portret & Evenement",
     slug: "portret-evenement",
     albums: [
+      { title: "Social Impact Factory", slug: "social-impact-factory", cover: url("/fotos/portfolio/portret-evenement/social-impact-factory/natulatte_4.jpg")},
       { title: "Interdisciplinair Diner", slug: "interdisciplinair-diner", cover: url("/fotos/portfolio/portret-evenement/interdisciplinair-diner/diner ai creativiteit_37.jpg")},
       { title: "Telusa Lente Viering", slug: "telusa-lente-viering", cover: url("/fotos/portfolio/portret-evenement/telusa-lente-viering/telusa_17.jpg")},
       { title: "Momo, Maay & Jochem", slug: "momo-maay-jochem", cover: url("/fotos/portfolio/portret-evenement/momo-maay-jochem/maya.jpg") },
@@ -48,7 +49,9 @@ export const categories: CategoryMeta[] = [
     albums: [
       { title: "MØS", slug: "mos", cover: url("/fotos/portfolio/bedrijf/mos/foto cafe mos.jpg") },
       { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/bedrijf/la-divine/cakeje%20maken.jpg") },
-      { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/bedrijf/wienshout/lw hout stoel2.jpg") },
+      { title: "Natulatte", slug: "natulatte", cover: url("/fotos/portfolio/bedrijf/natulatte/natulatte_7.jpg")},
+      { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/bedrijf/wienshout/lw hout stoel2.jpg") }
+
     ],
   },
 ];

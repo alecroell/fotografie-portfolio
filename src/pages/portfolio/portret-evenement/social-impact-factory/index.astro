@@ -1,0 +1,31 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Social Impact Factory — Portret & Evenement">
+  <section class="page">
+    <header class="intro">
+      <h1>Social Impact Factory</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/portret-evenement/social-impact-factory/natulatte_1.jpg", alt: "Social Impact Factory" },
+        { src: "/fotos/portfolio/portret-evenement/social-impact-factory/natulatte_4.jpg", alt: "Social Impact Factory" },
+        { src: "/fotos/portfolio/portret-evenement/social-impact-factory/SIF_6.jpg", alt: "Social Impact Factory" },
+        { src: "/fotos/portfolio/portret-evenement/social-impact-factory/natulatte_6.jpg", alt: "Social Impact Factory" },
+        { src: "/fotos/portfolio/portret-evenement/social-impact-factory/SIF_5.jpg", alt: "Social Impact Factory" },
+        { src: "/fotos/portfolio/portret-evenement/social-impact-factory/SIF_7.jpg", alt: "Social Impact Factory" },
+        { src: "/fotos/portfolio/portret-evenement/social-impact-factory/SIF_3.jpg", alt: "Social Impact Factory" },
+        { src: "/fotos/portfolio/portret-evenement/social-impact-factory/SIF_4.jpg", alt: "Social Impact Factory" },
+        { src: "/fotos/portfolio/portret-evenement/social-impact-factory/natulatte_2.jpg", alt: "Social Impact Factory" },
+        
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+</Layout>
