@@ -52,7 +52,7 @@ export const categories: CategoryMeta[] = [
       { title: "MØS", slug: "mos", cover: url("/fotos/portfolio/bedrijf/mos/foto cafe mos.jpg") },
       { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/bedrijf/la-divine/cakeje%20maken.jpg") },
       { title: "Natulatte", slug: "natulatte", cover: url("/fotos/portfolio/bedrijf/natulatte/natulatte_7.jpg")},
-      { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/bedrijf/wienshout/lw hout stoel2.jpg") }
+      { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/bedrijf/wienshout/gg.jpg") }
 
     ],
   },
