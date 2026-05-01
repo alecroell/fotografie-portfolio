@@ -24,6 +24,7 @@ export const categories: CategoryMeta[] = [
     title: "Reizen & Plekken",
     slug: "reizen-plekken",
     albums: [
+      { title: "Rome II", slug: "rome-II", cover: url("/fotos/portfolio/reizen-plekken/rome-II/Roma_2.jpg")},
       { title: "Parijs", slug: "parijs", cover: url("/fotos/portfolio/reizen-plekken/parijs/vogel.jpg") },
       { title: "Berlijn", slug: "berlijn", cover: url("/fotos/portfolio/reizen-plekken/berlijn/df.jpg") },
       { title: "Rome", slug: "rome", cover: url("/fotos/portfolio/reizen-plekken/rome/455.jpg") },

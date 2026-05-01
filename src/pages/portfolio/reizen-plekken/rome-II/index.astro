@@ -1,0 +1,30 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Rome II — Reizen & Plekken">
+  <section class="page">
+    <header class="intro">
+      <h1>Rome II</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/reizen-plekken/rome-II/Roma_2.jpg", alt: "Rome II" },
+        { src: "/fotos/portfolio/reizen-plekken/rome-II/Romaa 2.jpg", alt: "Rome II" },
+        { src: "/fotos/portfolio/reizen-plekken/rome-II/Roma_1.jpg", alt: "Rome II" },
+        { src: "/fotos/portfolio/reizen-plekken/rome-II/Roma_3.jpg", alt: "Rome II" },
+        { src: "/fotos/portfolio/reizen-plekken/rome-II/Roma_13.jpg", alt: "Rome II" },
+        { src: "/fotos/portfolio/reizen-plekken/rome-II/Roma_12.jpg", alt: "Rome II" },
+        { src: "/fotos/portfolio/reizen-plekken/rome-II/Roma_9.jpg", alt: "Rome II" },
+        { src: "/fotos/portfolio/reizen-plekken/rome-II/Roma_8.jpg", alt: "Rome II" },
+        { src: "/fotos/portfolio/reizen-plekken/rome-II/Roma_4.jpg", alt: "Rome II" }
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+</Layout>
