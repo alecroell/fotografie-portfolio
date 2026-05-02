@@ -27,21 +27,10 @@ const isActive = (href: string): boolean => {
         <a class="brand" href="/">ALECROELLFOTOGRAFIE</a>
 
         <nav class="nav" aria-label="Hoofdnavigatie">
-          <a class={isActive("/portfolio") ? "active" : ""} href="/portfolio">
-            PORTFOLIO
-          </a>
-
-          <a class={isActive("/reviews") ? "active" : ""} href="/reviews">
-            REVIEWS
-          </a>
-
-          <a class={isActive("/contact") ? "active" : ""} href="/contact">
-            CONTACT
-          </a>
-
-          <a class={isActive("/") ? "active" : ""} href="/">
-            HOME
-          </a>
+          <a class={isActive("/portfolio") ? "active" : ""} href="/portfolio">PORTFOLIO</a>
+          <a class={isActive("/reviews") ? "active" : ""} href="/reviews">REVIEWS</a>
+          <a class={isActive("/contact") ? "active" : ""} href="/contact">CONTACT</a>
+          <a class={isActive("/") ? "active" : ""} href="/">HOME</a>
         </nav>
       </header>
 
@@ -142,6 +131,7 @@ const isActive = (href: string): boolean => {
         font-size: 1.3rem;
         color: var(--accent);
         text-decoration: none;
+        white-space: nowrap;
       }
 
       .nav {
@@ -304,13 +294,27 @@ const isActive = (href: string): boolean => {
       @media (max-width: 640px) {
         .siteHeader {
           flex-direction: column;
-          align-items: flex-start;
-          gap: 1rem;
+          align-items: center;
+          gap: 1.25rem;
+        }
+
+        .brand {
+          font-size: 1.05rem;
+          letter-spacing: 2.5px;
+          text-align: center;
         }
 
         .nav {
-          gap: 1.5rem;
-          flex-wrap: wrap;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-wrap: nowrap;
+          gap: 1.2rem;
+        }
+
+        .nav a {
+          font-size: 0.78rem;
+          letter-spacing: 2px;
         }
       }
     </style>
