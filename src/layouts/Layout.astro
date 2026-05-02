@@ -30,9 +30,15 @@ const isActive = (href: string): boolean => {
           <a class={isActive("/portfolio") ? "active" : ""} href="/portfolio">
             PORTFOLIO
           </a>
+
+          <a class={isActive("/reviews") ? "active" : ""} href="/reviews">
+            REVIEWS
+          </a>
+
           <a class={isActive("/contact") ? "active" : ""} href="/contact">
             CONTACT
           </a>
+
           <a class={isActive("/") ? "active" : ""} href="/">
             HOME
           </a>

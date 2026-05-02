@@ -1,0 +1,61 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Reviews | ALECROELLFOTOGRAFIE">
+  <section class="page page--narrow" aria-labelledby="reviews-title">
+    <header class="intro">
+      <h1 id="reviews-title">Reviews</h1>
+      <p>Reacties van mensen met wie ik heb samengewerkt.</p>
+    </header>
+
+    <section class="reviews" aria-label="Reviews">
+      <article class="review">
+        <p>
+          Alec heeft de sfeer, omgeving en ons bedrijf heel mooi vastgelegd. De foto’s voelen natuurlijk,
+          persoonlijk en professioneel. We kunnen nu maanden vooruit met foto's voor onze marketing en branding.
+        </p>
+        <h2>Leah (Bedrijfsshoot MOS)</h2>
+      </article>
+
+      <article class="review">
+        <p>
+          Fijne communicatie, ontspannen tijdens het fotograferen en erg blij
+          met de foto's!
+        </p>
+        <h2>Maud (Portretshoot)</h2>
+      </article>
+    </section>
+  </section>
+
+  <style>
+    .reviews {
+      display: grid;
+      gap: 1.4rem;
+    }
+
+    .review {
+      border: 1px solid var(--line);
+      padding: 1.6rem;
+      text-align: center;
+      background: rgba(107, 61, 46, 0.02);
+    }
+
+    .review p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .review h2 {
+      margin: 1rem 0 0;
+      font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino,
+        Garamond, Georgia, serif;
+      font-size: 0.9rem;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+  </style>
+</Layout>
