@@ -1,0 +1,29 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Spoorwegmuseum — Bedrijf">
+  <section class="page">
+    <header class="intro">
+      <h1>Spoorwegmuseum</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/bedrijf/spoorwegmuseum/Roma_2.jpg", alt: "Spoorwegmuseum" },
+        { src: "/fotos/portfolio/bedrijf/spoorwegmuseum/Roma_4.jpg", alt: "Spoorwegmuseum" },
+        { src: "/fotos/portfolio/bedrijf/spoorwegmuseum/roma_5.jpg", alt: "Spoorwegmuseum" },
+        { src: "/fotos/portfolio/bedrijf/spoorwegmuseum/spoorweg_1.jpg", alt: "Spoorwegmuseum" },
+        { src: "/fotos/portfolio/bedrijf/spoorwegmuseum/spoorweg_3.jpg", alt: "Spoorwegmuseum" },
+        { src: "/fotos/portfolio/bedrijf/spoorwegmuseum/spoorweg_5.jpg", alt: "Spoorwegmuseum" },
+        { src: "/fotos/portfolio/bedrijf/spoorwegmuseum/spoorweg_7.jpg", alt: "Spoorwegmuseum" },
+        { src: "/fotos/portfolio/bedrijf/spoorwegmuseum/spoorwegg (2).jpg", alt: "Spoorwegmuseum" },
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+</Layout>

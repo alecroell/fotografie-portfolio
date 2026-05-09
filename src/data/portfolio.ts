@@ -50,6 +50,7 @@ export const categories: CategoryMeta[] = [
     title: "Bedrijf",
     slug: "bedrijf",
     albums: [
+      { title: "Spoorwegmuseum", slug: "spoorwegmuseum", cover: "/fotos/portfolio/bedrijf/spoorwegmuseum/spoorweg_5.jpg"},
       { title: "MØS", slug: "mos", cover: url("/fotos/portfolio/bedrijf/mos/foto cafe mos.jpg") },
       { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/bedrijf/la-divine/cakeje%20maken.jpg") },
       { title: "Natulatte", slug: "natulatte", cover: url("/fotos/portfolio/bedrijf/natulatte/natulatte_7.jpg")},
