@@ -1,0 +1,54 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Aiden — Portret & Evenement">
+  <section class="page">
+    <header class="intro">
+      <h1>Aiden</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/portret-evenement/aiden/spoorweg_1.jpg", alt: "Aiden" },
+        { src: "/fotos/portfolio/portret-evenement/aiden/spoorweg_5.jpg", alt: "Aiden" },
+        { src: "/fotos/portfolio/portret-evenement/aiden/spoorweg_7.jpg", alt: "Aiden" },
+        { src: "/fotos/portfolio/portret-evenement/aiden/spoorweg_3.jpg", alt: "Aiden" },
+        { src: "/fotos/portfolio/portret-evenement/aiden/spoorweg_2.jpg", alt: "Aiden" },
+        { src: "/fotos/portfolio/portret-evenement/aiden/spoorweg_6.jpg", alt: "Aiden" },
+        { src: "/fotos/portfolio/portret-evenement/aiden/spoorweg_19.jpg", alt: "Aiden" },
+        { src: "/fotos/portfolio/portret-evenement/aiden/spoorweg_28.jpg", alt: "Aiden" },
+        { src: "/fotos/portfolio/portret-evenement/aiden/spoorweg.jpg", alt: "Aiden" },
+      
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+
+  <style>
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin: 0 0 2rem;
+    }
+
+    .intro h1 {
+      margin: 0 0 0.5rem;
+      color: var(--accent);
+    }
+
+    .intro p {
+      margin: 0 auto;
+      opacity: 0.75;
+      text-align: center;
+    }
+  </style>
+</Layout>

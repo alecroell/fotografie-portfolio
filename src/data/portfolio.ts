@@ -36,6 +36,7 @@ export const categories: CategoryMeta[] = [
     title: "Portret & Evenement",
     slug: "portret-evenement",
     albums: [
+      { title: "Aiden", slug: "aiden", cover: "/fotos/portfolio/portret-evenement/aiden/spoorweg_2.jpg"},
       { title: "Sam, Scott & Lebon", slug: "sam-scott-lebon",cover: url("/fotos/portfolio/portret-evenement/sam-scott-lebon/Roma_20.jpg")},
       { title: "Panel - The Green Times", slug: "panel-the-green-times", cover: url("/fotos/portfolio/portret-evenement/panel-the-green-times/DSC031125.JPG"),position: "25% center"},
       { title: "Social Impact Factory", slug: "social-impact-factory", cover: url("/fotos/portfolio/portret-evenement/social-impact-factory/natulatte_4.jpg")},
@@ -53,9 +54,6 @@ export const categories: CategoryMeta[] = [
       { title: "Spoorwegmuseum", slug: "spoorwegmuseum", cover: "/fotos/portfolio/bedrijf/spoorwegmuseum/spoorweg_5.jpg"},
       { title: "MØS", slug: "mos", cover: url("/fotos/portfolio/bedrijf/mos/foto cafe mos.jpg") },
       { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/bedrijf/la-divine/cakeje%20maken.jpg") },
-      { title: "Natulatte", slug: "natulatte", cover: url("/fotos/portfolio/bedrijf/natulatte/natulatte_7.jpg")},
-      { title: "Wienshout", slug: "wienshout", cover: url("/fotos/portfolio/bedrijf/wienshout/gg.jpg") }
-
     ],
   },
 ];
