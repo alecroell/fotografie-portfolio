@@ -5,11 +5,13 @@ import { getCategory } from "../../../data/portfolio";
 const categoryTitle = "Bedrijf";
 
 const category = getCategory("bedrijf");
+
 const albums =
   category?.albums.map((a) => ({
     title: a.title,
     href: `/portfolio/bedrijf/${a.slug}`,
     cover: a.cover,
+    position: a.position,
   })) ?? [];
 ---
 
@@ -25,9 +27,17 @@ const albums =
         <article class="card">
           <a class="cardLink" href={a.href} aria-label={`Bekijk album ${a.title}`}>
             <figure class="frame">
-              <img src={a.cover} alt={`${a.title} cover`} loading="eager" decoding="async" />
+              <img
+                src={a.cover}
+                alt={`${a.title} cover`}
+                loading="eager"
+                decoding="async"
+                style={`object-position: ${a.position ?? "center"};`}
+              />
             </figure>
+
             <h2 class="name">{a.title}</h2>
+
             <span class="btn">Bekijk album</span>
           </a>
         </article>
