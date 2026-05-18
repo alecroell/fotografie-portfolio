@@ -48,7 +48,7 @@ export const categories: CategoryMeta[] = [
     title: "Bedrijf",
     slug: "bedrijf",
     albums: [
-      { title: "De Buitenproeverij", slug: "de-buitenproeverij", cover: url("/fotos/portfolio/bedrijf/de-buitenproeverij/de buitenproeverij 16-05-2026 (51).jpg"),position: "57% center"},
+      { title: "De Buitenproeverij", slug: "de-buitenproeverij", cover: url("/fotos/portfolio/bedrijf/de-buitenproeverij/de buitenproeverij 16-05-2026 (50).jpg"),position: "57% center"},
       { title: "Spoorwegmuseum", slug: "spoorwegmuseum", cover: "/fotos/portfolio/bedrijf/spoorwegmuseum/spoorweg_5.jpg"},
       { title: "MØS", slug: "mos", cover: url("/fotos/portfolio/bedrijf/mos/foto cafe mos.jpg") },
       { title: "La Divine", slug: "la-divine", cover: url("/fotos/portfolio/bedrijf/la-divine/cakeje%20maken.jpg") },
