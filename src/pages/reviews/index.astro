@@ -6,24 +6,57 @@ import Layout from "../../layouts/Layout.astro";
   <section class="page page--narrow" aria-labelledby="reviews-title">
     <header class="intro">
       <h1 id="reviews-title">Reviews</h1>
-      <p>Reacties van mensen met wie ik heb samengewerkt.</p>
+      <p>Reacties van mensen en organisaties met wie ik heb samengewerkt.</p>
     </header>
 
     <section class="reviews" aria-label="Reviews">
       <article class="review">
         <p>
-          Alec heeft de sfeer, omgeving en ons bedrijf heel mooi vastgelegd. De foto’s voelen natuurlijk,
-          persoonlijk en professioneel. We kunnen nu maanden vooruit met foto's voor onze marketing en branding.
+          Wij zijn als Spoorwegmuseum erg enthousiast over de opgeleverde
+          foto’s. De beelden zijn veelzijdig inzetbaar, bijvoorbeeld voor onze
+          sociale media en website, en sluiten mooi aan bij onze uitstraling.
         </p>
-        <h2>Leah (Bedrijfsshoot MØS)</h2>
+
+        <p>
+          Wat ons in het bijzonder aanspreekt, zijn de sterke composities.
+          Ook het gebruik van scherpte en diepte is erg geslaagd. Dit zorgt
+          voor sfeervolle beelden waarin de producten toch goed zichtbaar en
+          gedetailleerd blijven. De belichting en kadrering dragen sterk bij
+          aan de visuele kracht van de foto’s.
+        </p>
+
+        <p>
+          Daarnaast hebben wij de samenwerking als zeer prettig ervaren. De
+          communicatie verliep helder en professioneel, met voldoende
+          flexibiliteit om goed in te spelen op onze wensen. Dat maakte het
+          hele proces aangenaam en efficiënt.
+        </p>
+
+        <p>
+          Al met al kijken wij terug op een fijne samenwerking en een mooi
+          eindresultaat waar we met plezier gebruik van maken.
+        </p>
+
+        <h2>Iris — Spoorwegmuseum</h2>
+      </article>
+
+      <article class="review">
+        <p>
+          Alec heeft de sfeer, omgeving en ons bedrijf heel mooi vastgelegd.
+          De foto’s voelen natuurlijk, persoonlijk en professioneel. We kunnen
+          nu maanden vooruit met foto's voor onze marketing en branding.
+        </p>
+
+        <h2>Leah — MØS</h2>
       </article>
 
       <article class="review">
         <p>
           Fijne communicatie, ontspannen tijdens het fotograferen en erg blij
-          met de foto's!
+          met de foto's.
         </p>
-        <h2>Maud (Portretshoot)</h2>
+
+        <h2>Maud — Portretshoot</h2>
       </article>
     </section>
   </section>
@@ -31,31 +64,48 @@ import Layout from "../../layouts/Layout.astro";
   <style>
     .reviews {
       display: grid;
-      gap: 1.4rem;
+      gap: 1.8rem;
     }
 
     .review {
-      border: 1px solid var(--line);
-      padding: 1.6rem;
+      border: 1px solid rgba(107, 61, 46, 0.18);
+      padding: 2.4rem 2.2rem 2rem;
       text-align: center;
-      background: rgba(107, 61, 46, 0.02);
+      background: rgba(107, 61, 46, 0.018);
     }
 
     .review p {
-      margin: 0;
-      font-size: 1.05rem;
-      line-height: 1.7;
+      margin: 0 auto 1rem;
+      max-width: 58ch;
+      font-size: 1.02rem;
+      line-height: 1.85;
       color: var(--muted);
     }
 
+    .review p:last-of-type {
+      margin-bottom: 0;
+    }
+
     .review h2 {
-      margin: 1rem 0 0;
+      margin: 1.6rem 0 0;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(107, 61, 46, 0.14);
       font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino,
         Garamond, Georgia, serif;
-      font-size: 0.9rem;
-      letter-spacing: 1.4px;
+      font-size: 0.86rem;
+      letter-spacing: 1.6px;
       text-transform: uppercase;
       color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .review {
+        padding: 2rem 1.4rem 1.7rem;
+      }
+
+      .review p {
+        font-size: 1rem;
+      }
     }
   </style>
 </Layout>
