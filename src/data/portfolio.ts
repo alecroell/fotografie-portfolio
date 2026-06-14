@@ -33,6 +33,7 @@ export const categories: CategoryMeta[] = [
     title: "Portret & Evenement",
     slug: "portret-evenement",
     albums: [
+      { title: "21 Diner Juul", slug: "21-diner-juul", cover: url("/fotos/portfolio/portret-evenement/21-diner-juul/juul (8).jpg")},
       { title: "Aiden", slug: "aiden", cover: "/fotos/portfolio/portret-evenement/aiden/spoorweg_3.jpg"},
       { title: "Sam, Scott & Lebon", slug: "sam-scott-lebon",cover: url("/fotos/portfolio/portret-evenement/sam-scott-lebon/Roma_20.jpg")},
       { title: "Panel - The Green Times", slug: "panel-the-green-times", cover: url("/fotos/portfolio/portret-evenement/panel-the-green-times/DSC031125.JPG"),position: "25% center"},

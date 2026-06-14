@@ -1,0 +1,27 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="21 Diner Juul — Portret & Evenement">
+  <section class="page">
+    <header class="intro">
+      <h1>21 Diner Juul</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+         { src: "/fotos/portfolio/portret-evenement/21-diner-juul/cameraa.jpg", alt: "21 Diner Juul" },
+        { src: "/fotos/portfolio/portret-evenement/21-diner-juul/juul (8).jpg", alt: "21 Diner Juul" },
+        { src: "/fotos/portfolio/portret-evenement/21-diner-juul/cameraa_1.jpg", alt: "21 Diner Juul" },
+        { src: "/fotos/portfolio/portret-evenement/21-diner-juul/juul (16).jpg", alt: "21 Diner Juul" },
+        { src: "/fotos/portfolio/portret-evenement/21-diner-juul/juul (19).jpg", alt: "21 Diner Juul" },
+        { src: "/fotos/portfolio/portret-evenement/21-diner-juul/cameraa_2.jpg", alt: "21 Diner Juul" }
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+</Layout>
