@@ -1,0 +1,30 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Zweden — Reizen & Plekken">
+  <section class="page">
+    <header class="intro">
+      <h1>Zweden</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        { src: "/fotos/portfolio/reizen-plekken/zweden/zweden saba (15).jpg", alt: "Zweden" },
+        { src: "/fotos/portfolio/reizen-plekken/zweden/zweden saba (24).jpg", alt: "Zweden" },
+        { src: "/fotos/portfolio/reizen-plekken/zweden/zweden saba (32).jpg", alt: "Zweden" },
+        { src: "/fotos/portfolio/reizen-plekken/zweden/zweden saba (2).jpg", alt: "Zweden" },
+        { src: "/fotos/portfolio/reizen-plekken/zweden/zweden saba (4).jpg", alt: "Zweden" },
+        { src: "/fotos/portfolio/reizen-plekken/zweden/zweden saba (5).jpg", alt: "Zweden" },
+        { src: "/fotos/portfolio/reizen-plekken/zweden/zweden saba (18).jpg", alt: "Zweden" },
+        { src: "/fotos/portfolio/reizen-plekken/zweden/zweden saba (40).jpg", alt: "Zweden" },
+        { src: "/fotos/portfolio/reizen-plekken/zweden/zweden saba (42).jpg", alt: "Zweden" }
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+</Layout>
