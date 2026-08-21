@@ -1,0 +1,57 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Albanië — Reizen & Plekken">
+  <section class="page">
+    <header class="intro">
+      <h1>Albanië</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        {
+          src: "/fotos/portfolio/reizen-plekken/albanie/albanie (036).jpg",
+          alt: "Albanië"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/albanie/albanie (053).jpg",
+          alt: "Albanië"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/albanie/albanie (065).jpg",
+          alt: "Albanië"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/albanie/albanie (001).jpg",
+          alt: "Albanië"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/albanie/albanie (087).jpg",
+          alt: "Albanië"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/albanie/albanie (011).jpg",
+          alt: "Albanië"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/albanie/albanie (004).jpg",
+          alt: "Albanië"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/albanie/albanie (012).jpg",
+          alt: "Albanië"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/albanie/albanie (069).jpg",
+          alt: "Albanië"
+        },
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+</Layout>

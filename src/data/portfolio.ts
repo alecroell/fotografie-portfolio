@@ -24,10 +24,12 @@ export const categories: CategoryMeta[] = [
     title: "Reizen & Plekken",
     slug: "reizen-plekken",
     albums: [
+      { title: "Bordeaux", slug: "bordeaux", cover: url("/fotos/portfolio/reizen-plekken/bordeaux/bordeaux (084).jpg")},
+      { title: "Albanië", slug: "albanie", cover: url("/fotos/portfolio/reizen-plekken/albanie/albanie (012).jpg")},
+      { title: "Zweden", slug: "zweden", cover: url("/fotos/portfolio/reizen-plekken/zweden/zweden saba (24).jpg")},
       { title: "Rome II", slug: "rome-II", cover: url("/fotos/portfolio/reizen-plekken/rome-II/Roma_2.jpg")},
       { title: "Parijs", slug: "parijs", cover: url("/fotos/portfolio/reizen-plekken/parijs/vogel.jpg") },
       { title: "Rome", slug: "rome", cover: url("/fotos/portfolio/reizen-plekken/rome/455.jpg") },
-      { title: "Zweden", slug: "zweden", cover: url("/fotos/portfolio/reizen-plekken/zweden/zweden saba (24).jpg")},
     ],
   },
   {
@@ -35,7 +37,7 @@ export const categories: CategoryMeta[] = [
     slug: "portret-evenement",
     albums: [
       { title: "21 Diner Juul", slug: "21-diner-juul", cover: url("/fotos/portfolio/portret-evenement/21-diner-juul/juul (8).jpg")},
-      { title: "Aiden", slug: "aiden", cover: "/fotos/portfolio/portret-evenement/aiden/spoorweg_3.jpg"},
+      { title: "Aiden", slug: "aiden", cover: "/fotos/portfolio/portret-evenement/aiden/spoorweg_2.jpg"},
       { title: "Sam, Scott & Lebon", slug: "sam-scott-lebon",cover: url("/fotos/portfolio/portret-evenement/sam-scott-lebon/Roma_20.jpg")},
       { title: "Panel - The Green Times", slug: "panel-the-green-times", cover: url("/fotos/portfolio/portret-evenement/panel-the-green-times/DSC031125.JPG"),position: "25% center"},
       { title: "Social Impact Factory", slug: "social-impact-factory", cover: url("/fotos/portfolio/portret-evenement/social-impact-factory/natulatte_4.jpg")},

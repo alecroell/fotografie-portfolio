@@ -1,0 +1,57 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import LightboxGallery from "../../../../components/LightboxGallery.astro";
+---
+
+<Layout title="Bordeaux — Reizen & Plekken">
+  <section class="page">
+    <header class="intro">
+      <h1>Bordeaux</h1>
+      <p>Klik op een foto om te vergroten.</p>
+    </header>
+
+    <LightboxGallery
+      images={[
+        {
+          src: "/fotos/portfolio/reizen-plekken/bordeaux/bordeaux (011).jpg",
+          alt: "Bordeaux"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/bordeaux/bordeaux (038).jpg",
+          alt: "Bordeaux"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/bordeaux/bordeaux (043).jpg",
+          alt: "Bordeaux"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/bordeaux/bordeaux (046).jpg",
+          alt: "Bordeaux"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/bordeaux/bordeaux (082).jpg",
+          alt: "Bordeaux"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/bordeaux/bordeaux (047).jpg",
+          alt: "Bordeaux"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/bordeaux/bordeaux (091).jpg",
+          alt: "Bordeaux"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/bordeaux/bordeaux (002).jpg",
+          alt: "Bordeaux"
+        },
+        {
+          src: "/fotos/portfolio/reizen-plekken/bordeaux/bordeaux (084).jpg",
+          alt: "Bordeaux"
+        }
+      ]}
+      columns={3}
+      fit="cover"
+      overlayBg="rgba(0,0,0,0.6)"
+    />
+  </section>
+</Layout>
