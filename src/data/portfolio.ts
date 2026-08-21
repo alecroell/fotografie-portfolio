@@ -24,7 +24,7 @@ export const categories: CategoryMeta[] = [
     title: "Reizen & Plekken",
     slug: "reizen-plekken",
     albums: [
-      { title: "Bordeaux", slug: "bordeaux", cover: url("/fotos/portfolio/reizen-plekken/bordeaux/bordeaux (084).jpg")},
+      { title: "Bordeaux", slug: "bordeaux", cover: url("/fotos/portfolio/reizen-plekken/bordeaux/bordeaux (011).jpg")},
       { title: "Albanië", slug: "albanie", cover: url("/fotos/portfolio/reizen-plekken/albanie/albanie (012).jpg")},
       { title: "Zweden", slug: "zweden", cover: url("/fotos/portfolio/reizen-plekken/zweden/zweden saba (24).jpg")},
       { title: "Rome II", slug: "rome-II", cover: url("/fotos/portfolio/reizen-plekken/rome-II/Roma_2.jpg")},
